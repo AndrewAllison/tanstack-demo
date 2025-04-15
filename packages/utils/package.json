@@ -1,0 +1,16 @@
+{
+  "name": "@tanstack-routing/utils",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "lint": "eslint \"**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"No tests yet\""
+  },
+  "devDependencies": {
+    "typescript": "~5.7.2",
+    "eslint": "^9.21.0"
+  }
+}
