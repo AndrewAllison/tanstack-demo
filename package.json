@@ -13,7 +13,8 @@
     "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules dist",
     "storybook:web": "pnpm --filter web storybook dev -p 6006",
     "prepare": "husky",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "commit": "cz"
   },
   "type": "module",
   "keywords": [],
@@ -23,6 +24,8 @@
     "@types/node": "22.14.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.24.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
@@ -38,5 +41,10 @@
     "typescript": "~5.3.3",
     "typescript-eslint": "^8.30.1",
     "vitest": "^3.1.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
