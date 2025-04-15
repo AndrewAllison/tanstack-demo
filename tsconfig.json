@@ -7,19 +7,19 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "allowImportingTsExtensions": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
-    "noEmit": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["apps/web/src/*"]
     },
-    "typeRoots": ["./types", "./node_modules/@types"],
-    "types": ["vitest"]
+    "typeRoots": ["./packages/types", "./node_modules/@types"],
+    "types": ["node"]
   },
-  "include": ["apps", "packages", "types", "eslint.config.ts"],
-  "exclude": ["node_modules", "dist", "build"]
+  "include": ["apps", "packages", "eslint.config.ts"],
+  "exclude": ["node_modules", "dist", "build"],
+  "files": [],
+  "references": [{ "path": "packages/utils" }, { "path": "apps/web/tsconfig.app.json" }]
 }

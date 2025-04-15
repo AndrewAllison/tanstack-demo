@@ -1,3 +1,5 @@
+
+// @ts-ignore
 import baseConfig from '../../eslint.config.js';
 import globals from 'globals';
 
@@ -10,6 +12,7 @@ export default [
 				...globals.node,
 			},
 		},
+		ignores: ["dist", "node_modules"],
 		rules: {
 			'no-console': 'off',
 		},

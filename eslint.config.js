@@ -7,6 +7,9 @@ import reactRefreshPlugin from 'eslint-plugin-react-refresh';
 import prettier from 'eslint-config-prettier';
 
 export default [
+  {
+    ignores: ["dist", "node_modules"],
+  },
   js.configs.recommended,
   {
     files: ['**/*.ts', '**/*.tsx'],
@@ -35,17 +38,18 @@ export default [
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-      
+
       // TypeScript specific rules
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-non-null-assertion': 'warn',
-      
+
       // General rules
       'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-unused-vars': ['error', { 'varsIgnorePattern': '^React$' }],
     },
   },
   prettier,
-]; 
+];
