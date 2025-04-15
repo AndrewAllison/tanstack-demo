@@ -14,13 +14,15 @@
     "storybook:web": "pnpm --filter web storybook dev -p 6006",
     "prepare": "husky",
     "lint-staged": "lint-staged",
-    "commit": "cz"
+    "commit": "cz",
+    "changesets": "pnpm changeset version && pnpm changeset publish"
   },
   "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@changesets/cli": "^2.29.0",
     "@types/node": "22.14.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
